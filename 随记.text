@@ -71,7 +71,7 @@
                        **需要注意的是,如果测试controller里返回的是String类型的中文字符串时会乱码,解决需要在方法中传入参数,如下:
                                 @GetMapping(value = "/index",produces = "text/html;charset=UTF-8")
 
-                
+
 
 
 
