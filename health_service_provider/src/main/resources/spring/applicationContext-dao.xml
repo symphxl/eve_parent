@@ -18,13 +18,20 @@
     <!--2.sqlSessionFactoryBean-->
     <!--3.配置mapper扫描包MapperScannerConfigurer,扫描Mapper的映射文件和接口-->
 
+    <!--利用外部配置文件=方法配置数据源-->
+    <context:property-placeholder location="classpath*:conf/*.properties"/>
+
     <!--数据源-->
     <bean id="dataSource"
           class="com.alibaba.druid.pool.DruidDataSource" destroy-method="close">
-        <property name="username" value="root" />
-        <property name="password" value="root" />
-        <property name="driverClassName" value="com.mysql.jdbc.Driver" />
-        <property name="url" value="jdbc:mysql://localhost:3306/health" />
+        <!--<property name="username" value="root" />-->
+        <property name="username" value="${jdbc.username}" />
+        <!--<property name="password" value="root" />-->
+        <property name="password" value="${jdbc.password}" />
+        <!--<property name="driverClassName" value="com.mysql.jdbc.Driver" />-->
+        <property name="driverClassName" value="${jdbc.driverClassName}" />
+        <!--<property name="url" value="jdbc:mysql://localhost:3306/health" />-->
+        <property name="url" value="${jdbc.url}" />
     </bean>
     <!--spring和mybatis整合的工厂bean-->
     <bean id="sqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">
