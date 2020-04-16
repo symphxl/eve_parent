@@ -23,6 +23,9 @@
                     </list>
                 </property>
             </bean>
+
+
+
         </mvc:message-converters>
     </mvc:annotation-driven>
     <!-- 指定应用名称 -->

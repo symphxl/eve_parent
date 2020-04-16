@@ -11,9 +11,10 @@
 
     <artifactId>health_interface</artifactId>
     <dependencies>
+
         <dependency>
-            <groupId>com.itheima</groupId>
-            <artifactId>health_common</artifactId>
+            <groupId>com.health</groupId>
+            <artifactId>health_pojo</artifactId>
             <version>1.0-SNAPSHOT</version>
         </dependency>
     </dependencies>
